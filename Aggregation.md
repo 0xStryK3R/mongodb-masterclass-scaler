@@ -43,6 +43,14 @@
         ```mongodb
         db.collection.aggregate([
         {
+            $match: {
+            price: {
+                $gt: 15,
+                $lt: 20
+            }
+            }
+        },
+        {
             $project: {
             name: 1,
             size: 1
@@ -51,7 +59,7 @@
         ])
         ```
         
-    2. Suppressing fields, including _id
+    2. Suppressing fields, including `_id`
         ```mongodb
         db.collection.aggregate([
         {
@@ -89,7 +97,7 @@
         ```
     
 44. Example 44 | [Dataset 13](/Datasets/13.txt)
-    1. $project with $add
+    1. `$project` with `$add`
         ```mongodb
         db.collection.aggregate([
         {
@@ -106,7 +114,7 @@
         ])
         ```
         
-    2. $project with $multiply
+    2. `$project` with `$multiply`
         ```mongodb
         db.collection.aggregate([
         {
@@ -123,7 +131,7 @@
         ])
         ```
         
-    3. $project with $divide
+    3. `$project` with `$divide`:
         ```mongodb
         db.collection.aggregate([
         {
@@ -141,7 +149,7 @@
         ```
     
 45. Example 45  | [Dataset 13](/Datasets/13.txt)
-    1. $project with $concat
+    1. `$project` with `$concat`
         ```mongodb
         db.collection.aggregate([
         {
@@ -175,7 +183,7 @@
         ])
         ```
     
-42. Date and time Operations | [Dataset 13](/Datasets/13.txt)
+42. Date and Time Operations | [Dataset 13](/Datasets/13.txt)
     ```mongodb
     db.collection.aggregate([
     {
@@ -229,4 +237,66 @@
         
     2. `$group` + `$push` + `$sort` + `dates`
         ```mongodb
+        db.collection.aggregate([
+        {
+            $sort: {
+            date: 1
+            }
+        },
+        {
+            $group: {
+            _id: {
+                day: {
+                "$dayOfYear": "$date"
+                },
+                year: {
+                $year: "$date"
+                }
+            },
+            itemsSold: {
+                $push: {
+                price: "$price",
+                quantity: "$quantity"
+                }
+            }
+            }
+        }
+        ])
         ```
+
+48. `$reduce` with `$group`
+    ```mongodb
+    ```
+
+49. `$group` stage and counting values by forming groups by name | [Dataset 13](/Datasets/13.txt)
+    ```mongodb
+    db.collection.aggregate([
+    {
+        $group: {
+        _id: "$name",
+        count: {
+            $sum: 1
+        }
+        }
+    }
+    ])
+    ```
+    
+50. `$group` with `$match` | [Dataset 13](/Datasets/13.txt)
+    ```mongodb
+    db.collection.aggregate([
+    {
+        $match: {
+        size: "medium"
+        }
+    },
+    {
+        $group: {
+        _id: "$name",
+        totalQuantity: {
+            $sum: "$quantity"
+        }
+        }
+    }
+    ])
+    ```
