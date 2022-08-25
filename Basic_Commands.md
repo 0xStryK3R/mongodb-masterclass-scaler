@@ -12,7 +12,7 @@
     db.collection.find({});
     ```
 
-3. `AND` Operator: `$and`
+3. `AND` Operator: `$and` | [Dataset 1](/Datasets/1.txt)
     ```mongodb
     db.collection.find({
     $and: [
