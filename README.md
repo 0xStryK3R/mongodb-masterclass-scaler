@@ -17,3 +17,4 @@ Basic Points:
 - Keys: Values
 - Keys are unique
 
+![](https://visitor-badge.glitch.me/badge?page_id=0xStryK3R.mongodb-masterclass-scaler&right_color=orange)
