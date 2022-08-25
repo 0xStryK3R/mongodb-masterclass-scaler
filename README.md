@@ -2,9 +2,14 @@
 
 [Mongo DB Cloud](https://www.mongodb.com/atlas/database)
 
-Mongo Shell for interacting with MongoDB
+[Playground](https://mongoplayground.net/)
 
-Points
+To connect to Mongo DB:
+- [Studio 3t](https://studio3t.com/free/
+)
+- MongoDB Compass
+
+Basic Points:
 - Tables --> Collections
 - Row --> Documents
 - Every Row has '_id' column
@@ -12,13 +17,3 @@ Points
 - Keys: Values
 - Keys are unique
 
-To connect to Mongo DB:
-- [Studio 3t](https://studio3t.com/free/
-)
-- MongoDB Compass
-
-```Connection Link
-mongodb+srv://arupb:<password>@mongodb-masterclass.fitcl.mongodb.net/test
-```
-
-[Playground](https://mongoplayground.net/)
