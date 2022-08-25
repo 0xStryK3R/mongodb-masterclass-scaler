@@ -1,0 +1,49 @@
+[
+    {
+      _id: "62e5288f4d0440f7811d1928",
+      name: "United States",
+      capital: "Washington, D.C.",
+      continent: "North America",
+      language: "English",
+      population: 328239523,
+      
+    },
+    {
+      _id: "62e5288f4d0440f7811d192b",
+      name: "Australia",
+      capital: "Canberra",
+      continent: "Australia",
+      language: "English",
+      population: 25681300,
+      
+    },
+    {
+      _id: "62e5288f4d0440f7811d192c",
+      name: "Japan",
+      capital: "Tokyo",
+      continent: "Asia",
+      language: "Japanese",
+      population: 125960000,
+      
+    },
+    {
+      _id: "62e5288f4d0440f7811d192d",
+      name: "Brazil",
+      capital: "Brasília",
+      continent: "South America",
+      language: "Portuguese",
+      population: 210147125,
+      
+    },
+    
+    {
+    _id: "62e5288f4d0440f7811d142d",
+    name: "India",
+    capital: "Delhi",
+    continent: "Asia",
+    language: "Hindi",
+    
+  },
+
+  ]
+  

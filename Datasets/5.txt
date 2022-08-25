@@ -1,0 +1,10 @@
+
+[
+  {
+    _id: 1,
+    colors: [
+      "blue, green, red"
+    ]
+  }
+]
+
