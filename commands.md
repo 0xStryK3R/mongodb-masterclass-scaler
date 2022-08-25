@@ -189,6 +189,7 @@
     ```
 
 14. `Exists` Operator: `$exists`
+    ```mongodb
     db.collection.find({
     population: {
         $exists: true,
@@ -199,4 +200,3 @@
     }
     })
     ```
-
